@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Mailinator.NET
+namespace Mailinator
 {
     public class EmailNotFoundException : Exception
     {

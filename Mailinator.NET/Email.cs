@@ -1,15 +1,26 @@
 ﻿using System.Collections.Generic;
+using Newtonsoft.Json;
 
-namespace Mailinator.NET
+namespace Mailinator
 {
     public class Email
     {
-        private long _secondsAgo;
-        private string _id;
-        private string _to;
-        private long _time;
-        private string _subject;
-        private string _fromFull;
-        private Dictionary<string, string> _headers;
+        [JsonProperty("fromfull")]
+        public string FromEmail { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
+        public string Subject { get; set; }
+        public int RequestId { get; set; }
+        public string IP { get; set; }
+        public IEnumerable<EmailParts> Parts { get; set; }
+        [JsonProperty("from")]
+        public string FromName { get; set; }
+        [JsonProperty("been_read")]
+        public bool IsRead { get; set; }
+        [JsonProperty("to")]
+        public string ToEmail { get; set; }
+        public string Id { get; set; }
+        public long Time { get; set; }
+        [JsonProperty("seconds_ago")]
+        public long SecondsAgo { get; set; }
     }
 }

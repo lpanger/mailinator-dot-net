@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mailinator.NET", "Mailinator.NET\Mailinator.NET.csproj", "{B5240429-ECC2-4165-B27A-9AA11977ACD6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{0B4BED94-8D84-404C-B66E-174C044D3AC8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{B5240429-ECC2-4165-B27A-9AA11977ACD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B5240429-ECC2-4165-B27A-9AA11977ACD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B5240429-ECC2-4165-B27A-9AA11977ACD6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B4BED94-8D84-404C-B66E-174C044D3AC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B4BED94-8D84-404C-B66E-174C044D3AC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B4BED94-8D84-404C-B66E-174C044D3AC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B4BED94-8D84-404C-B66E-174C044D3AC8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
