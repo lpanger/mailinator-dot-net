@@ -4,5 +4,7 @@ A package to use Mailinator (http://www.mailinator.com) API's. Requires a paid A
 
 # Usage
 
+```
 var client = new Mailinator.Client("API_TOKEN_HERE");
 var emailList = await client.GetEmailsAsync("sometestemail@mailinator.com");
+```
