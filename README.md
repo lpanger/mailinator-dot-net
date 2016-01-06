@@ -2,7 +2,7 @@
 
 A package to use Mailinator (http://www.mailinator.com) API's. Requires a paid API key from Mailinator.
 
-# Usage
+#### Usage
 
 ```
 var client = new Mailinator.Client("API_TOKEN_HERE");
