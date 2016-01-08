@@ -32,7 +32,7 @@ namespace Mailinator
         /// </summary>
         /// <param name="emailAddress"></param>
         /// <returns>Collection of Email metadata</returns>
-        public async Task<IEnumerable<EmailMetadata>> GetInboxAsync(string emailAddress)
+        public async Task<Inbox> GetInboxAsync(string emailAddress)
         {
             var parameters = string.Format("{0}token={1}&private_domain={2}&to={3}", InboxEndpoint, _token,
                 _privateDomain, emailAddress);
@@ -44,7 +44,7 @@ namespace Mailinator
                 var result =
                     await client.GetAsync(parameters);
 
-                return JsonConvert.DeserializeObject<IEnumerable<EmailMetadata>>(await result.Content.ReadAsStringAsync());
+                return JsonConvert.DeserializeObject<Inbox>(await result.Content.ReadAsStringAsync());
             }
         }
 
@@ -77,15 +77,14 @@ namespace Mailinator
         /// <returns>Successful or not</returns>
         public async Task<bool> DeleteEmailAsync(string msgId)
         {
-            var parameters = string.Format("{0}token={1}&private_domain={2}&to={3}", DeleteEndpoint, _token,
+            var parameters = string.Format("{0}token={1}&private_domain={2}&msgid={3}", DeleteEndpoint, _token,
                 _privateDomain, msgId);
 
             using (var client = new HttpClient())
             {
                 client.BaseAddress = new Uri(BaseUrl);
 
-                var result =
-                    await client.GetAsync(parameters);
+                var result = await client.GetAsync(parameters);
 
                 return result.IsSuccessStatusCode;
             }

@@ -15,24 +15,27 @@ namespace Tests
         private string _testEmailId = "PUT_YOUR_TEST_EMAIL_ID_HERE";
 
         [Test]
-        public async Task GetInboxEmailList()
+        public void GetInboxEmailList()
         {
             var mailinator = new Mailinator.Client(_token);
-            var test = await mailinator.GetInboxAsync(_testEmail);
+            var test = mailinator.GetInboxAsync(_testEmail);
+            var result = test.Result;
         }
 
         [Test]
-        public async Task GetEmail()
+        public void GetEmail()
         {
             var mailinator = new Mailinator.Client(_token);
-            var test = await mailinator.GetEmailAsync(_testEmailId);
+            var test = mailinator.GetEmailAsync(_testEmailId);
+            var result = test.Result;
         }
 
         [Test]
-        public async Task DeleteEmail()
+        public void DeleteEmail()
         {
             var mailinator = new Mailinator.Client(_token);
-            var test = await mailinator.DeleteEmailAsync(_testEmailId);
+            var test = mailinator.DeleteEmailAsync(_testEmailId);
+            var result = test.Result;
         }
     }
 }

@@ -47,7 +47,6 @@
     <Compile Include="Email.cs" />
     <Compile Include="EmailEnvelope.cs" />
     <Compile Include="EmailMetadata.cs" />
-    <Compile Include="EmailNotFoundException.cs" />
     <Compile Include="Client.cs" />
     <Compile Include="EmailParts.cs" />
     <Compile Include="Inbox.cs" />
@@ -62,7 +61,7 @@
   <Target Name="BeforeBuild">
   </Target> -->
   <Target Name="AfterBuild" Condition=" '$(Configuration)' == 'Release'">
-	<Exec Command="..\.nuget\nuget.exe pack Mailinator.NET.csproj -Prop Configuration=Release -IncludeReferencedProjects"></Exec>
+    <Exec Command="..\.nuget\nuget.exe pack Mailinator.NET.csproj -Prop Configuration=Release -IncludeReferencedProjects">
+    </Exec>
   </Target>
-  
 </Project>
