@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Mailinator.NET</id>
-    <version>1.0.1</version>
+    <version>1.0.3</version>
     <title>Mailinator.NET</title>
     <authors>Lucas Pang</authors>
     <owners>Lucas Pang</owners>
@@ -10,7 +10,7 @@
     <projectUrl>https://github.com/lpanger/mailinator-dot-net</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Library to use Mailinator API</description>
-    <releaseNotes>Minor refactoring</releaseNotes>
+    <releaseNotes>Add extra methods to get email contents</releaseNotes>
     <copyright>Copyright 2016</copyright>
     <tags>Mailinator</tags>
   </metadata>
