@@ -35,7 +35,7 @@ namespace Mailinator
         public async Task<Inbox> GetInboxAsync(string emailAddress)
         {
             var parameters = string.Format("{0}token={1}&private_domain={2}&to={3}", InboxEndpoint, _token,
-                _privateDomain, emailAddress);
+                _privateDomain ? "true" : "false", emailAddress);
 
             using (var client = new HttpClient())
             {
@@ -56,7 +56,7 @@ namespace Mailinator
         public async Task<Email> GetEmailAsync(string msgId)
         {
             var parameters = string.Format("{0}token={1}&private_domain={2}&msgid={3}", EmailEndpoint, _token,
-                _privateDomain, msgId);
+                _privateDomain ? "true" : "false", msgId);
 
             using (var client = new HttpClient())
             {
@@ -78,7 +78,7 @@ namespace Mailinator
         public async Task<bool> DeleteEmailAsync(string msgId)
         {
             var parameters = string.Format("{0}token={1}&private_domain={2}&msgid={3}", DeleteEndpoint, _token,
-                _privateDomain, msgId);
+                _privateDomain ? "true" : "false", msgId);
 
             using (var client = new HttpClient())
             {
